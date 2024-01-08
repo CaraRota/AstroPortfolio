@@ -1,0 +1,29 @@
+---
+import { skills } from "../TechStack/Skills.astro";
+import HTML from "../icons/HTML.astro";
+import Css from "../icons/Css.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import React from "../icons/React.astro";
+import Node from "../icons/Node.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+---
+
+{
+    skills.map((skill) => (
+        <div class="mt-2 mr-1 relative inline-block select-none whitespace-nowrap rounded-full bg-slate-700 hover:bg-slate-600 px-3.5 py-1.5 align-baseline font-sans text-xs font-bold uppercase leading-none text-white">
+            <div class="absolute top-2/4 left-2 size-4 -translate-y-2/4">
+                {skill.name === "HTML5" && <HTML />}
+                {skill.name === "CSS3" && <Css />}
+                {skill.name === "JavaScript" && <JavaScript />}
+                {skill.name === "ReactJS" && <React />}
+                {skill.name === "NodeJS" && <Node />}
+                {skill.name === "Astro" && <AstroIcon />}
+            </div>
+            <div class="ml-4 mt-px">
+                <p class="block font-sans text-sm font-medium capitalize leading-none text-white antialiased">
+                    {skill.name}
+                </p>
+            </div>
+        </div>
+    ))
+}
