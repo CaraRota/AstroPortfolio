@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
 import TechStack from "../components/TechStack/TechStack.astro";
+import WorkExperience from "../components/ui/WorkExperience.astro";
 ---
 
 <Layout title="My Portfolio: Homepage">
@@ -26,7 +27,7 @@ import TechStack from "../components/TechStack/TechStack.astro";
                 class="w-1/2 h-auto sm:w-60 sm:h-auto rounded-full mt-5 drop-shadow-lg"
             />
         </div>
-        <div class="flex place-content-center mt-5">
+        <div class="flex place-content-center mt-5 mx-auto w-11/12">
             🥋 <span
                 class="font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"
                 >SKILLS:</span
@@ -35,5 +36,58 @@ import TechStack from "../components/TechStack/TechStack.astro";
         <div class="flex flex-wrap place-content-center mx-auto">
             <TechStack />
         </div>
+        <div class="flex flex-row w-11/12 mx-auto text-slate-300 mt-5 max-w-screen-lg">
+            🐱‍💻
+            <span
+                class="font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent ml-2">
+                ABOUT ME:
+            </span>
+        </div>
+        <div class="flex flex-col w-11/12 mx-auto text-slate-300 mt-2 max-w-screen-lg">
+            <p>
+                As a Full Stack Developer, I am capable of developing products from 0 to 1. I am
+                leaned towards building software that is scalable, easy to use, and that provides a
+                great user experience. My studies in business administration and my experience as a
+                business owner have given me a unique perspective on how to build products that are
+                not only technically sound but also that are aligned with the business goals of the
+                company.
+            </p>
+        </div>
+        <div class="flex flex-row w-11/12 mx-auto text-slate-300 mt-5 max-w-screen-lg">
+            👷🏻‍♂️
+            <span
+                class="font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent ml-2">
+                WORK EXPERIENCE:
+            </span>
+        </div>
+        <WorkExperience>
+            <Fragment slot="company">Ruta 3 SRL</Fragment>
+            <Fragment slot="position">Full Stack Developer</Fragment>
+            <Fragment slot="date">2022 - Present</Fragment>
+            <Fragment slot="icon">💻</Fragment>
+            <Fragment slot="title">Remote</Fragment>
+            <Fragment slot="description">
+                In charge of developing a webapp for managing the trips of a transport company.
+                Users are able to search for different trip offers, choose their available driver
+                and truck, and then proceed to book it. While admin is responsible for creating
+                offers and managing the trips.
+            </Fragment>
+        </WorkExperience>
+        <hr
+            class="mx-auto h-px my-4 bg-gray-600 border-0 dark:bg-gray-700 w-11/12 max-w-screen-lg"
+        />
+        <WorkExperience>
+            <Fragment slot="company">Camia Hnos!</Fragment>
+            <Fragment slot="position">General Manager</Fragment>
+            <Fragment slot="date">2012 - Present</Fragment>
+            <Fragment slot="icon">🏬</Fragment>
+            <Fragment slot="title">Hybrid</Fragment>
+            <Fragment slot="description">
+                Camia Hnos! is an electronics retail store in Canals, Cordoba. I am responsible for
+                the day-to-day operations of the business, including managing employees, overseeing
+                the financials, and ensuring we are delivering the best customer experience
+                possible.
+            </Fragment>
+        </WorkExperience>
     </main>
 </Layout>

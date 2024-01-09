@@ -1,0 +1,30 @@
+---
+import Chip from "../ui/Chip.astro";
+---
+
+<div class="flex flex-col w-11/12 mx-auto text-slate-300 mt-2 max-w-screen-lg">
+    <div class="flex flex-row">
+        <div class="flex flex-col w-1/2">
+            <h3 class="font-bold">
+                <slot name="company" />
+            </h3>
+            <p class="text-sm">
+                <slot name="position" />
+            </p>
+            <p class="text-sm">
+                <slot name="type" />
+            </p>
+            <Chip>
+                <span slot="icon">
+                    <slot name="icon" />
+                </span>
+                <p slot="title">
+                    <slot name="title" />
+                </p>
+            </Chip>
+        </div>
+        <p class="ml-4">
+            <slot name="description" />
+        </p>
+    </div>
+</div>
