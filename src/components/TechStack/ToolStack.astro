@@ -1,0 +1,26 @@
+---
+import { tools } from "./Skills.astro";
+import Chip from "../ui/Chip.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import MaterialUI from "../icons/Materialui.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import SASS from "../icons/Sass.astro";
+import Git from "../icons/Git.astro";
+import GitHub from "../icons/Github.astro";
+---
+
+{
+    tools.map((tool) => (
+        <Chip>
+            <Fragment slot="icon">
+                {tool === "TailwindCSS" && <Tailwind />}
+                {tool === "MaterialUI" && <MaterialUI />}
+                {tool === "Bootstrap" && <Bootstrap />}
+                {tool === "SASS" && <SASS />}
+                {tool === "Git" && <Git />}
+                {tool === "Github" && <GitHub />}
+            </Fragment>
+            <Fragment slot="title">{tool}</Fragment>
+        </Chip>
+    ))
+}

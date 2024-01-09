@@ -12,16 +12,15 @@ import Chip from "../ui/Chip.astro";
 {
     skills.map((skill) => (
         <Chip>
-            <span slot="icon">
-                {skill.name === "HTML5" && <HTML />}
-                {skill.name === "CSS3" && <Css />}
-                {skill.name === "JavaScript" && <JavaScript />}
-                {skill.name === "ReactJS" && <React />}
-                {skill.name === "NodeJS" && <Node />}
-                {skill.name === "Astro" && <AstroIcon />}
-            </span>
-
-            <span slot="title">{skill.name}</span>
+            <Fragment slot="icon">
+                {skill === "HTML5" && <HTML />}
+                {skill === "CSS3" && <Css />}
+                {skill === "JavaScript" && <JavaScript />}
+                {skill === "ReactJS" && <React />}
+                {skill === "NodeJS" && <Node />}
+                {skill === "Astro" && <AstroIcon />}
+            </Fragment>
+            <Fragment slot="title">{skill}</Fragment>
         </Chip>
     ))
 }
